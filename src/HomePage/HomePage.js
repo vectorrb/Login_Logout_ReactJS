@@ -9,9 +9,7 @@ class HomePage extends React.Component {
         this.props.getUsers();
     }
 
-    handleDeleteUser(id) {
-        return (e) => this.props.deleteUser(id);
-    }
+    
 
     render() {
         const { user, users } = this.props;
@@ -36,7 +34,6 @@ function mapState(state) {
 
 const actionCreators = {
     getUsers: userActions.getAll,
-    deleteUser: userActions.delete
 }
 
 const connectedHomePage = connect(mapState, actionCreators)(HomePage);
